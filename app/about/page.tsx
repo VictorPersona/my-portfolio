@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 // app/about/page.tsx
 export default function AboutPage() {
   return (
@@ -31,6 +33,13 @@ export default function AboutPage() {
             <span>Git & GitHub</span>
             <span>Linux</span>
           </div>
+        </div>
+        <div className="flex justify-center mt-10">
+          <Link href="/contact">
+            <button className=" px-6 py-3 bg-black rounded-md hover:bg-gray-800 transition text-white text-2xl ">
+              Contact Me
+            </button>
+          </Link>
         </div>
       </div>
     </section>

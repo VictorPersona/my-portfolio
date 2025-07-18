@@ -1,15 +1,25 @@
 import { useState } from 'react'
+
 export default function ContactForm() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Form Submitted', formData)
+    await fetch('api/send', {
+      method: 'POST',
+      headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      }),
+    })
     alert('Message sent!')
     setFormData({ name: '', email: '', message: '' })
   }
@@ -54,7 +64,10 @@ export default function ContactForm() {
           className="w-full border rounded border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
-      <button type="submit" className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
+      <button
+        type="submit"
+        className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
+      >
         Send Message
       </button>
     </form>
