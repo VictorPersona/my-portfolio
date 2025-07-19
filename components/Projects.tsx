@@ -1,5 +1,5 @@
 import ProjectCard from './ProjectCard'
-
+import { projects } from './data/projectData'
 export default function Projects() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-16">
@@ -7,7 +7,7 @@ export default function Projects() {
         <div className="">
           <h1 className="text-3xl font-bold text-gray-800">Projects</h1>
         </div>
-        <div className="grid md:grid-cols-2 gap-2">
+        {/* <div className="grid md:grid-cols-2 gap-2">
           <ProjectCard
             title="Gym Blog Site"
             description="A personal gym blog built using React, TypeScript, and Tailwind CSS. Includes sections for routines, diet, and transformation updates."
@@ -24,7 +24,16 @@ export default function Projects() {
             description="Academic project to simulate a basic compiler pipeline. Built using C++ and Lex/Yacc."
             github="https://github.com/gauravtupe/compiler-sim"
           />
-        </div>
+        </div> */}
+        {projects.map((project) => (
+          <ProjectCard
+            title={project.title}
+            description={project.description}
+            github={project.github}
+            demo={project.live}
+            key={project.title}
+          />
+        ))}
       </div>
     </section>
   )
