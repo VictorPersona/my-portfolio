@@ -11,12 +11,12 @@ export default function AboutPage() {
       <div className="max-w-4xl mx-auto px-4">
         {/* Bio */}
         <p className="text-gray-700 text-lg mb-8 leading-relaxed">
-          Hello! I'm Gaurav Tupe — a passionate fullstack developer and aspiring
-          cloud engineer. I enjoy building backend systems, designing scalable
-          architecture, and exploring modern technologies like containerization,
-          distributed systems, and OS-level optimization. I'm currently focused
-          on advancing my cloud computing knowledge while sharpening my
-          TypeScript and Go backend development skills.
+          Hello! I&apos;m Gaurav Tupe — a passionate fullstack developer and
+          aspiring cloud engineer. I enjoy building backend systems, designing
+          scalable architecture, and exploring modern technologies like
+          containerization, distributed systems, and OS-level optimization.
+          I&apos;m currently focused on advancing my cloud computing knowledge
+          while sharpening my TypeScript and Go backend development skills.
         </p>
 
         {/* Skills */}

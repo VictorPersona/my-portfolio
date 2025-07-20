@@ -4,10 +4,10 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 export default function Navbar() {
-  const [isDark, setIsDark] = useState(false)
-  const changeTheme = () => {
-    setIsDark(!isDark)
-  }
+  // const [isDark, setIsDark] = useState(false)
+  // const changeTheme = () => {
+  //   setIsDark(!isDark)
+  // }
   return (
     <nav className="bg-white px-4 py-6 rounded shadow-md sticky top-0 z-50">
       <div className="max-w-6xl mx-auto flex justify-between align-center">

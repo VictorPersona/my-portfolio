@@ -6,7 +6,7 @@ export default function HomePage() {
     <section className="flex flex-col-reverse md:flex-row  py-10 items-center  max-w-6xl mx-auto px-4 justify-between min-h-screen ">
       <div className="flex-1 text-center md:text-left ">
         <h1 className="text-4xl font-extrabold md:text-5xl text-gray-800 mb-4">
-          Hi, I'm Gaurav Tupe
+          Hi, I&apos;m Gaurav Tupe
         </h1>
         <h2 className="text-2xl md:text-3xl font-medium text-gray-600 mb-6">
           Aspiring FullStack Developer
